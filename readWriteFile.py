@@ -29,3 +29,12 @@ with open("testFile.txt", "w") as f:
 
 with open("testFile.txt", "r") as f:
     print(f.read())
+    
+# ----- We create new file ("x" - Create - will create a file, returns an error if the file exist)
+# ----- Also here we use the try except :) 
+
+try:
+    with open("testNewFile.txt", "x") as f:
+        f.close()
+except IOError:
+    print("File exists (Maybe)")
