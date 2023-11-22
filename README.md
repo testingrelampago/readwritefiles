@@ -7,4 +7,6 @@ python readWriteFile.py
 
 rm testFile.txt
 
+rm testNewFile.txt
+
 start Notepad++ read-file.py
