@@ -1,7 +1,7 @@
 # readwritefiles
 A way to start in python files
 
-# Some useful commands
+# Some useful commands (I'm working in Windows)
 
 python readWriteFile.py
 
