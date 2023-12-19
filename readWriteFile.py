@@ -38,3 +38,29 @@ try:
         f.close()
 except IOError:
     print("File exists (Maybe)")
+
+# ----- We read and write a Binary file
+# ----- 'rb' for reading binary files
+# ----- 'wb' for writing binary files
+
+# ----- Initialize binaryData to None
+binaryData = None
+
+# ----- We use the try except/because if the 'binary_file.bin' doesn't exist
+
+try:
+    with open('binaryFile.bin', 'rb') as f:
+        binaryData = f.read()
+except FileNotFoundError:
+    print("The file 'binaryFile.bin' does not exist.")
+
+# ----- Check if binaryData is not None before proceeding
+if binaryData is not None:
+    # ----- Open 'newBinaryFile.bin' for writing (create it if it doesn't exist)
+    try:
+        with open('newBinaryFile.bin', 'wb') as f:
+            f.write(binaryData)
+    except FileNotFoundError:
+        print("The file 'newBinaryFile.bin' does not exist.")
+
+
